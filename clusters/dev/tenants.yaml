@@ -8,7 +8,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./tenats/us-west-2/dev
+  path: ./tenants/dev
   prune: true
   wait: true
   timeout: 10m

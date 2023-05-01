@@ -1,0 +1,14 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: strimzi-kafka-operator
+spec:
+  chart:
+    spec:
+      chart: strimzi-kafka-operator
+      version: 1.0.0-4914f10
+      sourceRef:
+        kind: HelmRepository
+        namespace: flux-system
+        name: ecr
+  interval: 10m0s

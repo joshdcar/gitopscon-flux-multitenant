@@ -1,0 +1,16 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: processor-subsystem-ms1
+spec:
+  releaseName: processor-subsystem-ms1
+  chart:
+    spec:
+      chart: podinfo
+      version: "null"
+      sourceRef:
+        kind: HelmRepository
+        name: ecr
+        namespace: flux-system
+  interval: 5m
+

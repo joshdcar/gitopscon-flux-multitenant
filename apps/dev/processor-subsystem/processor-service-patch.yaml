@@ -1,0 +1,10 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: processor-service
+spec:
+  releaseName: processor-service
+  chart:
+    spec:
+      chart: podinfo
+      version: 5.0.0

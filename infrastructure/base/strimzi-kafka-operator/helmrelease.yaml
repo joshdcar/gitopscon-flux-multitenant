@@ -6,9 +6,9 @@ spec:
   chart:
     spec:
       chart: strimzi-kafka-operator
-      version: 1.0.0-4914f10
+      version: 0.8.2
       sourceRef:
         kind: HelmRepository
         namespace: flux-system
-        name: ecr
+        name: strimzi
   interval: 10m0s

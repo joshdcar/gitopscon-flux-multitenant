@@ -6,7 +6,7 @@ spec:
   chart:
     spec:
       chart: strimzi-kafka-operator
-      version: 0.8.2
+      version: 0.34.0
       sourceRef:
         kind: HelmRepository
         namespace: flux-system

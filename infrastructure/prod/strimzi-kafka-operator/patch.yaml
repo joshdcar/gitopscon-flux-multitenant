@@ -6,4 +6,4 @@ spec:
   chart:
     spec:
       chart: strimzi-kafka-operator
-      version: 1.0.0-6d00a2f
+      version: 0.34.0

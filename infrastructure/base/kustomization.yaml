@@ -1,2 +1,3 @@
 resources:
   - ecr.yaml
+  - strimzi-source.yaml

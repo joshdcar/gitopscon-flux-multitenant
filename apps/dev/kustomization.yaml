@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
   - identity-subsystem
   - processor-subsystem
+  - kafka-topics

@@ -4,3 +4,25 @@ namespace: acme
 resources:
   - namespace.yaml
   - ../../../apps/prod
+patches:
+  - target:
+        kind: HelmRelease
+        name: identity-service
+    patch: |-
+        - op: replace
+          path: /metadata/name
+          value: acme-identity-service
+  - target:
+      kind: HelmRelease
+      name: processor-service
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: acme-processor-service
+  - target:
+      kind: KafkaTopic
+      name: topic-one
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: acme-topic

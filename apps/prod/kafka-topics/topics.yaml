@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaTopic
 metadata:
-  name: topic
+  name: topic-one
   labels:
     strimzi.io/cluster: gitopscon-cluster
 spec:

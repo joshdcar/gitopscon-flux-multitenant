@@ -3,4 +3,26 @@ kind: Kustomization
 namespace: contoso
 resources:
   - namespace.yaml
-  - ../../../apps/dev
+  - ../../../apps/prod
+patches:
+  - target:
+      kind: HelmRelease
+      name: identity-service
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: contoso-identity-service
+  - target:
+      kind: HelmRelease
+      name: processor-service
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: contoso-processor-service
+  - target:
+      kind: KafkaTopic
+      name: topic-one
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: contoso-topic

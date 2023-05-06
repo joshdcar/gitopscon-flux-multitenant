@@ -22,8 +22,8 @@ The repository contains the following top directories:
 ├── clusters
 │   ├── dev
 │   │   ├── flux-system
-│   │   ├── infrastructure.yaml # kustomization for path ./infrastructure/dev
-│   │   ├── tenants.yaml # kustomization for path ./tenants/dev
+│   │   ├── infrastructure.yaml 
+│   │   ├── tenants.yaml 
 │   └── prod
 ├── infrastructure
 │   ├── base

@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: aviato
+resources:
+  - namespace.yaml
+  - ../../../apps/prod
+patches:
+  - target:
+        kind: HelmRelease
+        name: identity-service
+    patch: |-
+        - op: replace
+          path: /metadata/name
+          value: aviato-identity-service
+  - target:
+      kind: HelmRelease
+      name: processor-service
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: aviato-processor-service
+  - target:
+      kind: KafkaTopic
+      name: topic-one
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: aviato-topic
